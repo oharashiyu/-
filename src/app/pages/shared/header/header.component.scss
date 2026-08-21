@@ -1,0 +1,13 @@
+ mat-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+  }

@@ -1,0 +1,104 @@
+<div class="stamp-rally-container">
+  <div class="book" [class.open]="bookOpen">
+    <div class="book-cover">
+      <div class="book-cover-icon">📘</div>
+      <div class="book-cover-title">スタンプラリー</div>
+    </div>
+
+    <div class="stamp-rally-card">
+      <h1 class="stamp-rally-title">スタンプラリー</h1>
+      <p class="stamp-rally-count">{{ stampedCount }} / {{ geinins.length }} 組 集めた！</p>
+
+      <div class="book-page-wrapper">
+        <div class="book-spine"></div>
+
+        <div
+          class="book-page-content"
+          [class.turning]="pageTurning"
+          [class.turn-next]="turnDirection === 'next'"
+          [class.turn-prev]="turnDirection === 'prev'"
+        >
+          <div class="page-shine"></div>
+          <div class="page-spread">
+            <div class="page-half page-left">
+              <div
+                class="stamp-cell"
+                *ngFor="let g of leftPageItems; let i = index"
+                [class.stamped]="isStamped(g['name'])"
+                [class.mastered]="isMastered(g['name'])"
+                (click)="selectGeinin(g)"
+              >
+                <div
+                  class="stamp-image"
+                  [style.animation-delay]="(i * 0.08) + 's'"
+                  [style.background-image]="'url(&quot;assets/geinin-silhouette/' + g['name'] + '.png&quot;)'"
+                ></div>
+                <span class="stamp-name">{{ g['name'] }}</span>
+                <span class="mastered-badge" *ngIf="isMastered(g['name'])">👑</span>
+              </div>
+            </div>
+            <div class="page-half page-right">
+              <div
+                class="stamp-cell"
+                *ngFor="let g of rightPageItems; let i = index"
+                [class.stamped]="isStamped(g['name'])"
+                [class.mastered]="isMastered(g['name'])"
+                (click)="selectGeinin(g)"
+              >
+                <div
+                  class="stamp-image"
+                  [style.animation-delay]="((i + leftPageItems.length) * 0.08) + 's'"
+                  [style.background-image]="'url(&quot;assets/geinin-silhouette/' + g['name'] + '.png&quot;)'"
+                ></div>
+                <span class="stamp-name">{{ g['name'] }}</span>
+                <span class="mastered-badge" *ngIf="isMastered(g['name'])">👑</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-nav-row">
+          <button
+            type="button"
+            class="page-arrow arrow-prev"
+            [disabled]="currentPage === 0"
+            (click)="prevPage()"
+            aria-label="前のページ"
+          >‹</button>
+          <span class="page-indicator">{{ currentPage + 1 }} / {{ totalPages }} ページ</span>
+          <button
+            type="button"
+            class="page-arrow arrow-next"
+            [disabled]="currentPage >= totalPages - 1"
+            (click)="nextPage()"
+            aria-label="次のページ"
+          >›</button>
+        </div>
+      </div>
+
+      <div class="description-panel" [class.mastered-panel]="isMastered(selectedGeinin['name'])" *ngIf="selectedGeinin">
+        <button type="button" class="close-button" (click)="closeDescription()">×</button>
+        <h2 class="description-name">
+          {{ selectedGeinin['name'] }}
+          <span class="mastered-tag" *ngIf="isMastered(selectedGeinin['name'])">👑 完全マスター</span>
+        </h2>
+        <p class="description-line">所属：{{ selectedGeinin['agency'] || '不明' }}</p>
+        <p class="description-line">メンバー：{{ selectedGeinin['members'].join('、') }}</p>
+        <p class="description-line" *ngIf="selectedGeinin['m1Years'].length > 0">
+          M-1グランプリ優勝：{{ selectedGeinin['m1Years'].join('・') }}年
+        </p>
+        <p class="description-line" *ngIf="selectedGeinin['kocYears'].length > 0">
+          キングオブコント優勝：{{ selectedGeinin['kocYears'].join('・') }}年
+        </p>
+        <p class="description-trivia" *ngIf="selectedGeinin['trivia']">
+          豆知識：{{ selectedGeinin['trivia'] }}
+        </p>
+      </div>
+
+      <div class="button-row">
+        <button type="button" class="back-button" routerLink="/">ホームに戻る</button>
+        <button type="button" class="reset-button" (click)="resetStamps()">リセット</button>
+      </div>
+    </div>
+  </div>
+</div>

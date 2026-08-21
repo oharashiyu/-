@@ -1,0 +1,23 @@
+<div class="fullscreen-overlay">
+  <div class="fullscreen-content">
+    <div *ngIf="isCorrect" class="confetti-wrapper">
+    </div>
+    <p *ngIf="isCorrect" class="text-success pop-in">〇　せいかい</p>
+    <ng-container *ngIf="!isCorrect">
+      <p class="text-danger shake">☓　ざんねん</p>
+      <p class="correct-answer">正解は「{{ correctAnswer }}」でした</p>
+    </ng-container>
+
+    <ul class="details-list" *ngIf="details.length > 0">
+      <li *ngFor="let detail of details">{{ detail }}</li>
+    </ul>
+
+    <div class="action-button-area">
+      <button type="button" class="next-button" (click)="close()">{{ isLastQuestion ? '結果を見る' : '次の問題へ進む' }}</button>
+      <div class="secondary-action-row">
+        <button type="button" class="restart-button" (click)="restart()">最初からやり直す</button>
+        <button type="button" class="home-button" (click)="goHome()">ホームに戻る</button>
+      </div>
+    </div>
+  </div>
+</div>

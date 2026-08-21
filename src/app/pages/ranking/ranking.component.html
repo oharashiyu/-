@@ -1,0 +1,30 @@
+<div class="ranking-container">
+  <div class="ranking-card">
+    <h1 class="ranking-title">ランキング</h1>
+    <p class="ranking-description">完全マスター数の多い人から順に表示しています</p>
+
+    <div class="ranking-loading" *ngIf="isLoading">読み込み中...</div>
+
+    <ul class="ranking-list" *ngIf="!isLoading">
+      <li
+        class="ranking-row"
+        *ngFor="let entry of rankings; let i = index"
+        [class.current-user]="isCurrentUser(entry)"
+      >
+        <span class="ranking-rank" [class.top3]="i < 3">{{ i + 1 }}</span>
+        <span class="ranking-name">{{ entry.displayName }}</span>
+        <span class="ranking-stats">
+          <span class="ranking-mastered">👑 {{ entry.masteredCount }}</span>
+          <span class="ranking-stamped">🎫 {{ entry.stampedCount }}</span>
+        </span>
+      </li>
+      <li class="ranking-empty" *ngIf="rankings.length === 0">
+        まだ誰もランキングに登録されていません。ログインしてクイズに正解すると登録されます。
+      </li>
+    </ul>
+
+    <div class="button-row">
+      <button type="button" class="back-button" routerLink="/">ホームに戻る</button>
+    </div>
+  </div>
+</div>

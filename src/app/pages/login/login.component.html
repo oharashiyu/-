@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="login-card">
+    <h1 class="login-title">{{ isSignUp ? '新規登録' : 'ログイン' }}</h1>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-row">
+        <label>メールアドレス</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div class="form-row">
+        <label>パスワード</label>
+        <input type="password" formControlName="password" />
+      </div>
+
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <button type="submit" class="submit-button">{{ isSignUp ? '登録する' : 'ログイン' }}</button>
+    </form>
+
+    <button type="button" class="toggle-button" (click)="toggleMode()">
+      {{ isSignUp ? 'ログインはこちら' : '新規登録はこちら' }}
+    </button>
+  </div>
+</div>

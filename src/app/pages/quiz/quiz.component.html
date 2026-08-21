@@ -1,0 +1,99 @@
+ <form [formGroup]="form" class="quiz-card">
+    <div class="spinner-area" *ngIf="isLoading">
+      読み込み中...
+    </div>
+
+    <div class="fullscreen-overlay" *ngIf="quizFinished">
+      <div class="fullscreen-content">
+        <p class="result-score">{{ totalQuestions }}問中 {{ correctCount }}問正解でした！</p>
+
+        <ul class="history-list">
+          <li *ngFor="let h of history; let i = index" [class.correct]="h.isCorrect" [class.incorrect]="!h.isCorrect">
+            <span class="history-index">Q{{ i + 1 }}</span>
+            <span class="history-question">{{ h.questionText }}</span>
+            <span class="history-answer">
+              あなたの答え：{{ h.chosen }}
+              <ng-container *ngIf="!h.isCorrect">（正解：{{ h.correctAnswer }}）</ng-container>
+            </span>
+          </li>
+        </ul>
+
+        <div class="result-button-row">
+          <button type="button" class="next-button" (click)="restartQuiz()">もう一度</button>
+          <button type="button" class="home-button" routerLink="/">ホームに戻る</button>
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="!isLoading && !quizFinished">
+      <div class="question-number">
+        第{{ questionNumber }}問 / {{ totalQuestions }}問
+      </div>
+
+      <div class="time-attack-badge" *ngIf="timeAttackMode" [class.urgent]="timeRemaining <= 3">
+        ⏱ 残り{{ timeRemaining }}秒
+      </div>
+
+      <div class="question-area">
+        {{ questionText }}
+      </div>
+
+      <div class="detail-area">
+        <div class="pokemon-image">
+          <img src="assets/pokemon/{{ form.value.number }}.jpg" alt="ポケモン画像" />
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">なまえ：</span>
+          <button type="button" class="btn btn-info hint-button" *ngIf="!showNameHint" (click)="showNameHint = true">
+            ヒントを見る
+          </button>
+          <input type="text" formControlName="name" readonly *ngIf="showNameHint" />
+        </div>
+
+        <div class="info-row" *ngIf="questionColumn !== 'types'">
+          <span class="info-label">タイプ：</span>
+          <button type="button" class="btn btn-info hint-button" *ngIf="!showTypesHint" (click)="showTypesHint = true">
+            ヒントを見る
+          </button>
+          <input type="text" formControlName="types" readonly *ngIf="showTypesHint" />
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">しんか：</span>
+          <button type="button" class="btn btn-info hint-button" *ngIf="!showEvolutionsHint" (click)="showEvolutionsHint = true">
+            ヒントを見る
+          </button>
+          <input type="text" formControlName="evolutions" readonly *ngIf="showEvolutionsHint" />
+        </div>
+
+        <div class="info-row" *ngIf="questionColumn !== 'abilities'">
+          <span class="info-label">とくせい：</span>
+          <button type="button" class="btn btn-info hint-button" *ngIf="!showAbilitiesHint" (click)="showAbilitiesHint = true">
+            ヒントを見る
+          </button>
+          <input type="text" formControlName="abilities" readonly *ngIf="showAbilitiesHint" />
+        </div>
+
+        <div class="info-row" *ngIf="questionColumn !== 'hiddenAbilities'">
+          <span class="info-label">かくれとくせい：</span>
+          <button type="button" class="btn btn-info hint-button" *ngIf="!showHiddenAbilitiesHint" (click)="showHiddenAbilitiesHint = true">
+            ヒントを見る
+          </button>
+          <input type="text" formControlName="hiddenAbilities" readonly *ngIf="showHiddenAbilitiesHint" />
+        </div>
+      </div>
+
+      <div class="choice-area">
+        <button
+          type="button"
+          class="choice-button"
+          *ngFor="let choice of answers; let i = index"
+          [class]="'choice-' + i"
+          (click)="selectAnswer(choice)"
+        >
+          {{ choice }}
+        </button>
+      </div>
+    </ng-container>
+  </form>

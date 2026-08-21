@@ -1,0 +1,90 @@
+.how-to-play-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #eaf9f2 0%, #b9e4d7 45%, #7ecbb4 100%);
+  padding: 24px;
+}
+
+.how-to-play-card {
+  background: #fdfffe;
+  border: 2px solid #cdeee1;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  max-width: 460px;
+  width: 100%;
+}
+
+.how-to-play-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1f8a6f;
+  margin-bottom: 24px;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  text-align: left;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px dashed #cdeee1;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.step-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.step-title {
+  font-weight: 900;
+  color: #1f8a6f;
+}
+
+.step-description {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  background-color: #1f8a6f;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  filter: brightness(1.1);
+}

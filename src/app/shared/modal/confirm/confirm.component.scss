@@ -1,0 +1,127 @@
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.fullscreen-content {
+  text-align: center;
+  color: #fff;
+  max-width: 90vw;
+}
+
+.action-button-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.secondary-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.next-button {
+  background-color: #1f8a6f;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  filter: brightness(1.1);
+}
+
+.restart-button,
+.home-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.restart-button:hover,
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+ p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .pop-in {
+    animation: pop-in 0.5s ease;
+  }
+
+  .shake {
+    animation: shake 0.4s ease;
+  }
+
+  .confetti-wrapper {
+    position: relative;
+    height: 40px;
+  }
+
+  .confetti {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: confetti-fall 0.8s ease-in forwards;
+  }
+
+  .confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .confetti:nth-child(2) { left: 30%; animation-delay: 0.1s; }
+  .confetti:nth-child(3) { left: 50%; animation-delay: 0.05s; }
+  .confetti:nth-child(4) { left: 70%; animation-delay: 0.15s; }
+  .confetti:nth-child(5) { left: 90%; animation-delay: 0.2s; }
+
+  @keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+  }
+
+  @keyframes confetti-fall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(40px) rotate(360deg); opacity: 0; }
+  }
+ .correct-answer {
+    font-size: 1.1rem !important;
+    font-weight: normal;
+  }
+
+  .details-list {
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    color: #fff;
+  }

@@ -1,0 +1,26 @@
+<button
+  type="button"
+  class="menu-toggle"
+  (click)="toggleMenu()"
+  [attr.aria-expanded]="isOpen"
+  aria-label="メニューを開閉する"
+>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+
+<div class="side-menu-backdrop" *ngIf="isOpen" (click)="closeMenu()"></div>
+
+<nav class="side-menu-drawer" [class.open]="isOpen">
+  <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">ホーム</a>
+  <a routerLink="/quiz" routerLinkActive="active-link" (click)="closeMenu()">ポケモンクイズ</a>
+
+  <ng-container *ngIf="currentUser$ | async as user; else loggedOut">
+    <span class="user-email">{{ user.email }}</span>
+    <a (click)="logout(); closeMenu()">ログアウト</a>
+  </ng-container>
+  <ng-template #loggedOut>
+    <a routerLink="/login" routerLinkActive="active-link" (click)="closeMenu()">ログイン</a>
+  </ng-template>
+</nav>

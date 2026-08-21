@@ -1,0 +1,134 @@
+<div class="quiz-page">
+<form [formGroup]="form" class="quiz-card">
+  <div class="spinner-area" *ngIf="isLoading">
+    読み込み中...
+  </div>
+
+  <div class="fullscreen-overlay" *ngIf="quizFinished">
+    <div class="fullscreen-content">
+      <p class="result-score">{{ totalQuestions }}問中 {{ correctCount }}問正解でした！</p>
+
+      <div class="stamp-result-area" *ngIf="correctGeinins.length > 0">
+        <div class="stamp-result-item" *ngFor="let g of correctGeinins; let i = index">
+          <div
+            class="stamp-mark"
+            [style.animation-delay]="(i * 0.35) + 's'"
+            [style.background-image]="'url(&quot;assets/geinin-silhouette/' + g['name'] + '.png&quot;)'"
+          >
+            <span class="stamp-ring">GET!</span>
+          </div>
+          <p class="stamp-name">{{ g['name'] }}</p>
+          <div class="trivia-bubble" [style.animation-delay]="(i * 0.35 + 0.3) + 's'">
+            {{ g['trivia'] }}
+          </div>
+        </div>
+      </div>
+
+      <ul class="history-list">
+        <li *ngFor="let h of history; let i = index" [class.correct]="h.isCorrect" [class.incorrect]="!h.isCorrect">
+          <span class="history-index">Q{{ i + 1 }}</span>
+          <span class="history-question">{{ h.questionText }}</span>
+          <span class="history-answer">
+            あなたの答え：{{ h.chosen }}
+            <ng-container *ngIf="!h.isCorrect">（正解：{{ h.correctAnswer }}）</ng-container>
+          </span>
+        </li>
+      </ul>
+
+      <div class="result-button-row">
+        <button type="button" class="next-button" (click)="restartQuiz()">もう一度</button>
+        <button type="button" class="home-button" routerLink="/">ホームに戻る</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="!isLoading && !quizFinished">
+    <div class="quiz-header-row">
+      <div class="question-number">
+        第{{ questionNumber }}問 / {{ totalQuestions }}問
+      </div>
+      <button type="button" class="quiz-home-button" (click)="goHome()">ホームに戻る</button>
+    </div>
+
+    <div class="genre-title">{{ genreTitle }}</div>
+
+    <div class="time-attack-badge" *ngIf="timeAttackMode" [class.urgent]="timeRemaining <= 3">
+      ⏱ 残り{{ timeRemaining }}秒
+    </div>
+
+    <div class="question-area">
+      {{ questionText }}
+    </div>
+
+    <div class="detail-area">
+      <div class="info-row hint-row" *ngIf="genre !== 'agency' && genre !== 'silhouette'">
+        <span class="info-label">所属：</span>
+        <div class="hint-slider-area">
+          <span class="typewriter-text">{{ revealText(form.value.agency, agencyRevealLength) }}</span>
+          <input
+            type="range"
+            class="hint-slider"
+            min="0"
+            [max]="(form.value.agency || '').length"
+            [value]="agencyRevealLength"
+            (input)="onAgencySlide($event)"
+          />
+        </div>
+      </div>
+
+      <div class="info-row hint-row">
+        <span class="info-label">二人の芸名：</span>
+        <div class="hint-slider-area">
+          <span class="typewriter-text">{{ revealText(form.value.members, membersRevealLength) }}</span>
+          <input
+            type="range"
+            class="hint-slider"
+            min="0"
+            [max]="(form.value.members || '').length"
+            [value]="membersRevealLength"
+            (input)="onMembersSlide($event)"
+          />
+        </div>
+      </div>
+
+      <div class="info-row hint-row" *ngIf="genre === 'm1' || genre === 'koc'">
+        <span class="info-label">シルエット：</span>
+        <div class="hint-slider-area">
+          <div class="silhouette-hint-area">
+            <div
+              class="silhouette-image"
+              [style.background-image]="'url(&quot;assets/geinin-silhouette/' + correctAnswer + '.png&quot;)'"
+            ></div>
+            <div
+              class="silhouette-cover"
+              [style.transform]="'translateX(' + silhouetteRevealPercent + '%)'"
+            ></div>
+          </div>
+          <input
+            type="range"
+            class="hint-slider"
+            min="0"
+            max="100"
+            [value]="silhouetteRevealPercent"
+            (input)="onSilhouetteSlide($event)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="choice-area">
+      <button
+        type="button"
+        class="choice-button"
+        *ngFor="let choice of answers; let i = index"
+        [class]="'choice-' + i"
+        [class.silhouette-tile]="genre === 'silhouette'"
+        [style.background-image]="genre === 'silhouette' ? ('url(&quot;assets/geinin-silhouette/' + choice + '.png&quot;)') : null"
+        (click)="selectAnswer(choice)"
+      >
+        <span class="choice-name" *ngIf="genre !== 'silhouette'">{{ choice }}</span>
+      </button>
+    </div>
+  </ng-container>
+</form>
+</div>

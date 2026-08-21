@@ -1,0 +1,445 @@
+.quiz-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #eaf9f2 0%, #b9e4d7 45%, #7ecbb4 100%);
+  padding: 24px;
+}
+
+.quiz-card {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  background-color: #fdfffe;
+  border: 2px solid #cdeee1;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.question-area {
+  background-color: #dcf2e8;
+  color: #1f8a6f;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-bottom: 1px solid #cdeee1;
+}
+
+.detail-area {
+  padding: 10px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  .info-label {
+    width: 110px;
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  input[type='text'] {
+    flex: 1;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.9rem;
+  }
+}
+
+.hint-row {
+  align-items: flex-start;
+}
+
+.hint-slider-area {
+  flex: 1;
+}
+
+.typewriter-text {
+  display: block;
+  min-height: 1.3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1f8a6f;
+}
+
+.hint-slider {
+  width: 100%;
+  accent-color: #1f8a6f;
+}
+
+.choice-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 10px;
+
+    .choice-button {
+      position: relative;
+      padding: 16px 10px;
+      background-color: #fdfffe;
+      border: 2px solid #cdeee1;
+      border-radius: 16px;
+      color: #1f8a6f;
+      font-weight: 900;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    .choice-button.silhouette-tile {
+      min-height: 140px;
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      align-items: flex-end;
+    }
+
+    .choice-name {
+      background-color: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .choice-button.silhouette-tile .choice-name {
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    .choice-button:not(.silhouette-tile) .choice-name {
+      background-color: transparent;
+      color: #1f8a6f;
+    }
+
+    .choice-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+
+.quiz-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4px 16px 0;
+}
+
+.question-number {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1f8a6f;
+  text-align: center;
+}
+
+.quiz-home-button {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.genre-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #888;
+  text-align: center;
+  padding: 0 16px 4px;
+}
+
+.time-attack-badge {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #1f8a6f;
+  padding: 4px 16px 8px;
+  transition: color 0.2s ease;
+}
+
+.time-attack-badge.urgent {
+  color: #e0405a;
+  animation: time-urgent-pulse 0.6s ease infinite;
+}
+
+@keyframes time-urgent-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+p {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: pop-in 0.5s ease;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hint-button {
+  color: #fff;
+  font-weight: bold;
+  background-color: #34cfd0;
+  border-color: #34cfd0;
+}
+
+.hint-button:hover {
+  background-color: #2298a0;
+  border-color: #2298a0;
+}
+
+.silhouette-hint-area {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  background-color: #eee;
+}
+
+.silhouette-image {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.silhouette-cover {
+  position: absolute;
+  inset: 0;
+  background-color: #34cfd0;
+  border-left: 3px dashed #fff;
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.fullscreen-content {
+  color: #fff;
+  text-align: center;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.result-score {
+  font-size: 1.6rem !important;
+  margin-bottom: 16px;
+}
+
+.stamp-result-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 16px;
+  margin-bottom: 20px;
+}
+
+.stamp-result-item {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stamp-mark {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid #e0405a;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center top;
+  background-blend-mode: multiply;
+  filter: sepia(1) hue-rotate(300deg) saturate(4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 0 0 2px rgba(224, 64, 90, 0.4);
+  opacity: 0;
+  animation: stamp-slam 0.5s cubic-bezier(0.36, 1.8, 0.4, 1) forwards;
+}
+
+.stamp-ring {
+  color: #e0405a;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-weight: 900;
+  font-size: 0.7rem;
+  padding: 1px 8px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.stamp-name {
+  margin: 8px 0 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.trivia-bubble {
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-align: left;
+  white-space: pre-line;
+  opacity: 0;
+  animation: bubble-fade-in 0.4s ease forwards;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 8px solid #fff;
+  }
+}
+
+@keyframes stamp-slam {
+  0% {
+    transform: scale(2.4) rotate(6deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.9) rotate(-12deg);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.05) rotate(-8deg);
+  }
+  100% {
+    transform: scale(1) rotate(-10deg);
+    opacity: 1;
+  }
+}
+
+@keyframes bubble-fade-in {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+
+  li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #e0405a;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+  }
+
+  li.correct {
+    border-left-color: #4caf50;
+  }
+
+  .history-index {
+    font-weight: bold;
+    margin-right: 6px;
+  }
+
+  .history-question {
+    display: block;
+    font-weight: bold;
+    margin: 2px 0;
+  }
+
+  .history-answer {
+    display: block;
+    color: #ddd;
+  }
+}
+
+.result-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.next-button {
+  background-color: #34cfd0;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  filter: brightness(1.1);
+}
+
+.home-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}

@@ -1,0 +1,57 @@
+<div class="settings-container">
+  <div class="settings-card">
+    <h1 class="settings-title">設定</h1>
+
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <div class="form-row">
+        <label>1回のクイズの出題数</label>
+        <select formControlName="questionCount">
+          <option [value]="3">3問</option>
+          <option [value]="5">5問</option>
+          <option [value]="10">10問</option>
+          <option [value]="15">15問</option>
+          <option [value]="20">20問</option>
+        </select>
+      </div>
+
+      <div class="form-row checkbox-row">
+        <label>
+          <input type="checkbox" formControlName="timeAttackMode" />
+          タイムアタックモード
+        </label>
+      </div>
+
+      <div class="form-row" *ngIf="form.value.timeAttackMode">
+        <label>1問あたりの制限時間</label>
+        <select formControlName="timeLimitSeconds">
+          <option [value]="5">5秒</option>
+          <option [value]="10">10秒</option>
+          <option [value]="15">15秒</option>
+          <option [value]="20">20秒</option>
+        </select>
+      </div>
+
+      <ng-container *ngIf="isLoggedIn; else loggedOutHint">
+        <div class="form-row">
+          <label>ユーザーネーム</label>
+          <input type="text" formControlName="username" placeholder="ランキングに表示される名前" maxlength="20" />
+        </div>
+      </ng-container>
+      <ng-template #loggedOutHint>
+        <p class="settings-login-hint">
+          ユーザーネームを設定するには、まず
+          <a routerLink="/login" class="login-link">ログイン</a>
+          してください。
+        </p>
+      </ng-template>
+
+      <p class="saved-message" *ngIf="saved">保存しました！</p>
+
+      <button type="submit" class="submit-button">保存する</button>
+    </form>
+
+    <div class="button-row">
+      <button type="button" class="back-button" routerLink="/">ホームに戻る</button>
+    </div>
+  </div>
+</div>

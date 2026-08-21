@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+  body {
+    font-family: "M PLUS Rounded 1c", sans-serif !important;
+  }
+ .confirm-modal {
+    max-width: 320px;
+  }
+
+  .confirm-modal .modal-content {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fullscreen-result-modal {
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .fullscreen-result-modal .modal-content {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }

@@ -1,0 +1,72 @@
+<div class="home-hero">
+  <div class="deco deco-dots"></div>
+  <div class="deco deco-mic">🎤</div>
+  <div class="deco deco-spotlight"></div>
+  <div class="deco deco-triangle"></div>
+  <div class="deco deco-circle"></div>
+
+  <ng-container *ngIf="currentUser$ | async as user; else loggedOut">
+    <div class="login-badge user-badge">
+      <span class="user-email">{{ user.email }}</span>
+      <a (click)="logout()">ログアウト</a>
+    </div>
+  </ng-container>
+  <ng-template #loggedOut>
+    <a class="login-badge" routerLink="/login">
+      <span class="login-icon">👤</span>
+      ログイン
+    </a>
+  </ng-template>
+
+  <div class="hero-content">
+    <div class="tagline-cloud">
+      <span>＼ お笑いで、もっとつながる！ ／</span>
+    </div>
+    <h1 class="hero-title hero-title-oneline">
+      <span class="title-black">お笑い</span><span class="title-green">クイズ</span>
+    </h1>
+    <p class="hero-subtitle">
+      スタンプを全部埋めて、お笑いマスターになろう！
+    </p>
+  </div>
+
+  <div class="action-cards">
+    <a class="action-card" routerLink="/geinin-quiz">
+      <div class="action-icon">🏆</div>
+      <h2 class="action-title">クイズをはじめる</h2>
+      <p class="action-description">さっそくクイズに挑戦！</p>
+    </a>
+
+    <a class="action-card" routerLink="/stamp-rally">
+      <div class="action-icon">📖</div>
+      <h2 class="action-title">スタンプラリーを見る</h2>
+      <p class="action-description">クイズに答えてスタンプを集めよう！</p>
+    </a>
+
+    <a class="action-card" routerLink="/ranking">
+      <div class="action-icon">📈</div>
+      <h2 class="action-title">ランキング</h2>
+      <p class="action-description">あなたの成績をチェック！</p>
+    </a>
+  </div>
+
+  <div class="secondary-buttons">
+    <a class="secondary-button" routerLink="/settings">
+      <span class="secondary-icon">⚙️</span>
+      <div class="secondary-text">
+        <span class="secondary-title">設定</span>
+        <span class="secondary-description">ユーザーネームなどを設定できます</span>
+      </div>
+      <span class="secondary-arrow">›</span>
+    </a>
+
+    <a class="secondary-button" routerLink="/how-to-play">
+      <span class="secondary-icon">💡</span>
+      <div class="secondary-text">
+        <span class="secondary-title">遊び方</span>
+        <span class="secondary-description">クイズの遊び方を確認できます</span>
+      </div>
+      <span class="secondary-arrow">›</span>
+    </a>
+  </div>
+</div>

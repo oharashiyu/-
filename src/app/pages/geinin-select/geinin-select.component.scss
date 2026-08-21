@@ -1,0 +1,62 @@
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #eaf9f2 0%, #b9e4d7 45%, #7ecbb4 100%);
+  padding: 24px;
+}
+
+.select-card {
+  background: transparent;
+  text-align: center;
+  max-width: 980px;
+  width: 100%;
+}
+
+.select-description {
+  color: #2b3b35;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.genre-button-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.genre-button {
+  background-color: #fdfffe;
+  border: 2px solid #cdeee1;
+  border-radius: 20px;
+  padding: 28px 16px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #1f8a6f;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.genre-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.home-button {
+  margin-top: 24px;
+  background: none;
+  border: none;
+  color: #1f8a6f;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .genre-button-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
