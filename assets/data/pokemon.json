@@ -1,0 +1,182 @@
+[
+  {
+    "no": 1,
+    "name": "フシギダネ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [2],
+    "types": ["くさ", "どく"],
+    "abilities": ["しんりょく"],
+    "hiddenAbilities": ["ようりょくそ"],
+    "status": {
+      "hp": 45,
+      "attack": 49,
+      "defence": 49,
+      "spAttack": 65,
+      "spDefence": 65,
+      "speed": 45
+    }
+  },
+  {
+    "no": 45,
+    "name": "ラフレシア",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["くさ", "どく"],
+    "abilities": ["ようりょくそ"],
+    "hiddenAbilities": ["ほうし"],
+    "status": {
+      "hp": 75,
+      "attack": 80,
+      "defence": 85,
+      "spAttack": 110,
+      "spDefence": 90,
+      "speed": 50
+    }
+  },
+  {
+    "no": 103,
+    "name": "ナッシー",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["くさ", "エスパー"],
+    "abilities": ["ようりょくそ"],
+    "hiddenAbilities": ["しゅうかく"],
+    "status": {
+      "hp": 95,
+      "attack": 95,
+      "defence": 85,
+      "spAttack": 125,
+      "spDefence": 75,
+      "speed": 55
+    }
+  },
+  {
+    "no": 50,
+    "name": "ディグダ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [51],
+    "types": ["じめん"],
+    "abilities": ["すながくれ", "ありじごく"],
+    "hiddenAbilities": ["すなのちから"],
+    "status": {
+      "hp": 10,
+      "attack": 55,
+      "defence": 25,
+      "spAttack": 35,
+      "spDefence": 45,
+      "speed": 95
+    }
+  },
+  {
+    "no": 118,
+    "name": "トサキント",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [119],
+    "types": ["みず"],
+    "abilities": ["どんかん", "いしあたま"],
+    "hiddenAbilities": ["スイートベール"],
+    "status": {
+      "hp": 45,
+      "attack": 67,
+      "defence": 60,
+      "spAttack": 35,
+      "spDefence": 50,
+      "speed": 63
+    }
+  },
+  {
+    "no": 25,
+    "name": "ピカチュウ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [26],
+    "types": ["でんき"],
+    "abilities": ["せいでんき"],
+    "hiddenAbilities": ["ひらいしん"],
+    "status": {
+      "hp": 35,
+      "attack": 55,
+      "defence": 40,
+      "spAttack": 50,
+      "spDefence": 50,
+      "speed": 90
+    }
+  },
+  {
+    "no": 4,
+    "name": "ヒトカゲ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [5],
+    "types": ["ほのお"],
+    "abilities": ["もうか"],
+    "hiddenAbilities": ["サンパワー"],
+    "status": {
+      "hp": 39,
+      "attack": 52,
+      "defence": 43,
+      "spAttack": 60,
+      "spDefence": 50,
+      "speed": 65
+    }
+  },
+  {
+    "no": 7,
+    "name": "ゼニガメ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [8],
+    "types": ["みず"],
+    "abilities": ["げきりゅう"],
+    "hiddenAbilities": ["あめふらし"],
+    "status": {
+      "hp": 44,
+      "attack": 48,
+      "defence": 65,
+      "spAttack": 50,
+      "spDefence": 64,
+      "speed": 43
+    }
+  },
+  {
+    "no": 19,
+    "name": "コラッタ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [20],
+    "types": ["ノーマル"],
+    "abilities": ["にげあし", "するどいめ"],
+    "hiddenAbilities": ["こんじょう"],
+    "status": {
+      "hp": 30,
+      "attack": 56,
+      "defence": 35,
+      "spAttack": 25,
+      "spDefence": 35,
+      "speed": 72
+    }
+  },
+  {
+    "no": 94,
+    "name": "ゲンガー",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["ゴースト", "どく"],
+    "abilities": ["のろわれボディ"],
+    "hiddenAbilities": ["ふゆう"],
+    "status": {
+      "hp": 60,
+      "attack": 65,
+      "defence": 60,
+      "spAttack": 130,
+      "spDefence": 75,
+      "speed": 110
+    }
+  }
+]

@@ -1,0 +1,580 @@
+[
+  {
+    "name": "中川家",
+    "m1Years": [
+      2001
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "中川剛",
+      "中川礼二"
+    ],
+    "independentAgency": false,
+    "trivia": "本物の駅員から「似すぎて仕事に支障が出る」とクレームが来た。"
+  },
+  {
+    "name": "ますだおかだ",
+    "m1Years": [
+      2002
+    ],
+    "kocYears": [],
+    "agency": "松竹芸能",
+    "members": [
+      "増田英彦",
+      "岡田圭右"
+    ],
+    "independentAgency": false,
+    "trivia": "増田さんは学生時代にアマチュア相撲の大会で優勝した実力者。"
+  },
+  {
+    "name": "フットボールアワー",
+    "m1Years": [
+      2003
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "岩尾望",
+      "後藤輝基"
+    ],
+    "independentAgency": false,
+    "trivia": "後藤さんは当初、岩尾さんではなく別の人とピン芸人として組んでいた。"
+  },
+  {
+    "name": "アンタッチャブル",
+    "m1Years": [
+      2004
+    ],
+    "kocYears": [],
+    "agency": "プロダクション人力舎",
+    "members": [
+      "柴田英嗣",
+      "山崎弘也"
+    ],
+    "independentAgency": false,
+    "trivia": "山崎さんはバイト中、落ち着きのなさに店長からガチで怒られた。"
+  },
+  {
+    "name": "ブラックマヨネーズ",
+    "m1Years": [
+      2005
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "小杉竜一",
+      "吉田敬"
+    ],
+    "independentAgency": false,
+    "trivia": "吉田さんは鍵の閉め忘れが心配で、仕事中に何度も家に帰ってしまった。"
+  },
+  {
+    "name": "チュートリアル",
+    "m1Years": [
+      2006
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "徳井義実",
+      "福田充徹"
+    ],
+    "independentAgency": false,
+    "trivia": "徳井さんはハーレーを買った嬉しさで納車前に勝手にバイク屋へ見に行った。"
+  },
+  {
+    "name": "サンドウィッチマン",
+    "m1Years": [
+      2007
+    ],
+    "kocYears": [],
+    "agency": "グレープカンパニー",
+    "members": [
+      "伊達みきお",
+      "富澤たけし"
+    ],
+    "independentAgency": false,
+    "trivia": "伊達さんは下積み時代に「福祉用具専門相談員」の資格を取得して働いていた。"
+  },
+  {
+    "name": "NON STYLE",
+    "m1Years": [
+      2008
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "石田明",
+      "井上裕介"
+    ],
+    "independentAgency": false,
+    "trivia": "石田さんは学生時代にダンスのインストラクターを目指していた。"
+  },
+  {
+    "name": "パンクブーブー",
+    "m1Years": [
+      2009
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "佐藤哲夫",
+      "黒瀬純"
+    ],
+    "independentAgency": false,
+    "trivia": "黒瀬さんはプロ並みの画力で個展を開いたことがある。"
+  },
+  {
+    "name": "笑い飯",
+    "m1Years": [
+      2010
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "哲夫",
+      "西田幸治"
+    ],
+    "independentAgency": false,
+    "trivia": "西田さんは大忙しな時期でも「家から一歩も出ずにゲームをしたい」と直訴した。"
+  },
+  {
+    "name": "トレンディエンジェル",
+    "m1Years": [
+      2015
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "たかし",
+      "斎藤司"
+    ],
+    "independentAgency": false,
+    "trivia": "斎藤さんはお笑い芸人になる前、大手企業の「楽天」でバリバリ働いていた。"
+  },
+  {
+    "name": "銀シャリ",
+    "m1Years": [
+      2016
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "橋本直",
+      "鰻和弘"
+    ],
+    "independentAgency": false,
+    "trivia": "鰻さんはバイト先の居酒屋でお客さんの箸を自分の口に入れてしまったことがある。"
+  },
+  {
+    "name": "とろサーモン",
+    "m1Years": [
+      2017
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "久保田かずのぶ",
+      "村田充"
+    ],
+    "independentAgency": false,
+    "trivia": "村田さんは文芸誌に純文学の小説を書き下ろして高く評価された。"
+  },
+  {
+    "name": "霜降り明星",
+    "m1Years": [
+      2018
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "せいや",
+      "粗品"
+    ],
+    "independentAgency": false,
+    "trivia": "粗品さんは高校時代からプログラミングや作曲に没頭していた。"
+  },
+  {
+    "name": "ミルクボーイ",
+    "m1Years": [
+      2019
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "内海崇",
+      "駒場孝"
+    ],
+    "independentAgency": false,
+    "trivia": "内海さんは大学の落研時代、高座名が「木全」という普通の名字だった。"
+  },
+  {
+    "name": "マヂカルラブリー",
+    "m1Years": [
+      2020
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "野田クリスタル",
+      "村上和成"
+    ],
+    "independentAgency": false,
+    "trivia": "野田さんは自分でゲームソフトを本格的に開発・リリースしている。"
+  },
+  {
+    "name": "錦鯉",
+    "m1Years": [
+      2021
+    ],
+    "kocYears": [],
+    "agency": "SMA",
+    "members": [
+      "長谷川雅紀",
+      "渡辺隆"
+    ],
+    "independentAgency": false,
+    "trivia": "渡辺さんはかつてアルバイトしていたパチンコ店の縁を今でも大切にしている。"
+  },
+  {
+    "name": "ウエストランド",
+    "m1Years": [
+      2022
+    ],
+    "kocYears": [],
+    "agency": "タイタン",
+    "members": [
+      "井口浩之",
+      "河本太"
+    ],
+    "independentAgency": false,
+    "trivia": "井口さんは異常なほどの映画・ドラマ好きで毎クール大量の作品をチェックしている。"
+  },
+  {
+    "name": "令和ロマン",
+    "m1Years": [
+      2023,
+      2024
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "髙比良くるま",
+      "松井ケムリ"
+    ],
+    "independentAgency": false,
+    "trivia": "くるまさんは芸能界の歴史や裏側に異常に詳しい慶応中退のインテリ。\n松井ケムリさんは実父が大和証券のトップという超お坊ちゃま。"
+  },
+  {
+    "name": "たくろう",
+    "m1Years": [
+      2025
+    ],
+    "kocYears": [],
+    "agency": "吉本興業",
+    "members": [
+      "赤木裕",
+      "きむらバンド"
+    ],
+    "independentAgency": false,
+    "trivia": "赤木さんは独特なキャラの一方で、特技のイラストがとても上手い。"
+  },
+  {
+    "name": "バッファロー吾郎",
+    "m1Years": [],
+    "kocYears": [
+      2008
+    ],
+    "agency": null,
+    "members": [
+      "バッファロー吾郎A",
+      "竹若元博"
+    ],
+    "independentAgency": false,
+    "trivia": "木村さんは理由なく「バッファロー吾郎A」に改名した。"
+  },
+  {
+    "name": "東京03",
+    "m1Years": [],
+    "kocYears": [
+      2009
+    ],
+    "agency": null,
+    "members": [
+      "豊本明長",
+      "飯塚悟志",
+      "角田晃広"
+    ],
+    "independentAgency": false,
+    "trivia": "小道具に本物の店から調達した段ボールを使うほどリアルを追求する。"
+  },
+  {
+    "name": "キングオブコメディ",
+    "m1Years": [],
+    "kocYears": [
+      2010
+    ],
+    "agency": null,
+    "members": [
+      "高橋健一",
+      "今野浩喜"
+    ],
+    "independentAgency": false,
+    "trivia": "高橋さんは若手時代、人力舎一トゲがあると言われていた。"
+  },
+  {
+    "name": "ロバート",
+    "m1Years": [],
+    "kocYears": [
+      2011
+    ],
+    "agency": null,
+    "members": [
+      "山本博",
+      "秋山竜次",
+      "馬場裕之"
+    ],
+    "independentAgency": false,
+    "trivia": "秋山さんは常にスマホで架空の人物のネタ動画を撮り溜めている。"
+  },
+  {
+    "name": "バイきんぐ",
+    "m1Years": [],
+    "kocYears": [
+      2012
+    ],
+    "agency": null,
+    "members": [
+      "小峠英二",
+      "西村瑞樹"
+    ],
+    "independentAgency": false,
+    "trivia": "小峠さんは若い頃、先輩から頭皮の洗い方を真剣に指導されていた。"
+  },
+  {
+    "name": "かもめんたる",
+    "m1Years": [],
+    "kocYears": [
+      2013
+    ],
+    "agency": null,
+    "members": [
+      "岩崎う大",
+      "槙尾ユウスケ"
+    ],
+    "independentAgency": false,
+    "trivia": "う大さんはお笑い界屈指の漫画好きでサスペンス調のネタを書く。"
+  },
+  {
+    "name": "シソンヌ",
+    "m1Years": [],
+    "kocYears": [
+      2014
+    ],
+    "agency": null,
+    "members": [
+      "じろう",
+      "長谷川忍"
+    ],
+    "independentAgency": false,
+    "trivia": "じろうさんは女性の生態を研究しすぎて「女子高生が分かるおじさん」と呼ばれる。"
+  },
+  {
+    "name": "コロコロチキチキペッパーズ",
+    "m1Years": [],
+    "kocYears": [
+      2015
+    ],
+    "agency": null,
+    "members": [
+      "ナダル",
+      "西野創人"
+    ],
+    "independentAgency": false,
+    "trivia": "ナダルさんは先輩にイジられるとプライベートで異様に打たれ弱い。"
+  },
+  {
+    "name": "ライス",
+    "m1Years": [],
+    "kocYears": [
+      2016
+    ],
+    "agency": null,
+    "members": [
+      "田所仁",
+      "関町知弘"
+    ],
+    "independentAgency": false,
+    "trivia": "田所さんは極度のビビりで心霊ロケでは本当に泣いてしまう。"
+  },
+  {
+    "name": "かまいたち",
+    "m1Years": [],
+    "kocYears": [
+      2017
+    ],
+    "agency": "吉本興業",
+    "members": [
+      "山内健司",
+      "濱家隆一"
+    ],
+    "independentAgency": false,
+    "trivia": "山内さんは学生時代にシュールなミステリー小説を読み漁っていた。"
+  },
+  {
+    "name": "ハナコ",
+    "m1Years": [],
+    "kocYears": [
+      2018
+    ],
+    "agency": null,
+    "members": [
+      "菊田竜大",
+      "秋山寛貴",
+      "岡部大"
+    ],
+    "independentAgency": false,
+    "trivia": "秋山さんはマイペースすぎてネタ合わせ中に本気で寝落ちする。"
+  },
+  {
+    "name": "どぶろっく",
+    "m1Years": [],
+    "kocYears": [
+      2019
+    ],
+    "agency": null,
+    "members": [
+      "森慎太郎",
+      "江口直人"
+    ],
+    "independentAgency": false,
+    "trivia": "森さんは下ネタを歌うが、実家は厳格な神社である。"
+  },
+  {
+    "name": "ジャルジャル",
+    "m1Years": [],
+    "kocYears": [
+      2020
+    ],
+    "agency": "吉本興業",
+    "members": [
+      "後藤淳平",
+      "福徳秀介"
+    ],
+    "independentAgency": false,
+    "trivia": "福徳さんは恋愛をテーマにした純文学小説を何冊も出版している。"
+  },
+  {
+    "name": "空気階段",
+    "m1Years": [],
+    "kocYears": [
+      2021
+    ],
+    "agency": null,
+    "members": [
+      "水川かたまり",
+      "鈴木もぐら"
+    ],
+    "independentAgency": false,
+    "trivia": "かたまりさんは大学を3ヶ月で中退して実家でずっとラジオを聴いていた。"
+  },
+  {
+    "name": "ビスケットブラザーズ",
+    "m1Years": [],
+    "kocYears": [
+      2022
+    ],
+    "agency": null,
+    "members": [
+      "きん",
+      "原田泰雅"
+    ],
+    "independentAgency": false,
+    "trivia": "原田さんは見た目に反してイラストを描く才能が抜群に高い。"
+  },
+  {
+    "name": "サルゴリラ",
+    "m1Years": [],
+    "kocYears": [
+      2023
+    ],
+    "agency": null,
+    "members": [
+      "児玉智洋",
+      "赤羽健壱"
+    ],
+    "independentAgency": false,
+    "trivia": "児玉さんは幼稚園からの幼馴染で40代にしてようやく栄冠を掴んだ。"
+  },
+  {
+    "name": "ラブレターズ",
+    "m1Years": [],
+    "kocYears": [
+      2024
+    ],
+    "agency": "ASH&D",
+    "members": [
+      "塚本直毅",
+      "溜口佑太朗"
+    ],
+    "independentAgency": false,
+    "trivia": "塚本さんは劇場の合間に全国のサウナを巡るほどのマニアである。"
+  },
+  {
+    "name": "ロングコートダディ",
+    "m1Years": [],
+    "kocYears": [
+      2025
+    ],
+    "agency": null,
+    "members": [
+      "堂前透",
+      "兎"
+    ],
+    "independentAgency": false,
+    "trivia": "兎さんは大会の直前、女性役のキレを出すために10キロ痩せた。"
+  },
+  {
+    "name": "さらば青春の光",
+    "m1Years": [],
+    "kocYears": [],
+    "agency": "ザ・森東",
+    "independentAgency": true,
+    "members": [
+      "森田哲矢",
+      "東ブクロ"
+    ],
+    "trivia": "東ブクロさんのスキャンダルをネタやグッズにして会社で稼いでいる。"
+  },
+  {
+    "name": "ラランド",
+    "m1Years": [],
+    "kocYears": [],
+    "agency": "レモンジャム",
+    "independentAgency": true,
+    "members": [
+      "サーヤ",
+      "ニシダ"
+    ],
+    "trivia": "サーヤさんは広告会社の敏腕社長でもある。"
+  },
+  {
+    "name": "ダウ90000",
+    "m1Years": [],
+    "kocYears": [],
+    "agency": "オフィスカニバブル",
+    "independentAgency": true,
+    "members": [
+      "園田祥太",
+      "忽那文香",
+      "蓮見翔",
+      "吉原怜那",
+      "中島百依子",
+      "上原佑太",
+      "道上珠妃",
+      "飯原僚也"
+    ],
+    "trivia": "全メンバーの台本を主宰の蓮見さんが一人で書いている。"
+  }
+]
